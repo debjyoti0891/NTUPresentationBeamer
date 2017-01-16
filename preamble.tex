@@ -1,0 +1,97 @@
+% This file is part of the NTUTemplate distribution.
+%    (https://github.com/debjyoti0891/NTUPresentationBeamer)
+% Copyright (c) 2017 Debjyoti Bhattacharjee.
+% 
+% Licensed under the Apache License, Version 2.0 (the "License"); 
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+% 
+% http://www.apache.org/licenses/LICENSE-2.0
+% 
+% Unless required by applicable law or agreed to in writing, software distributed 
+% under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+% OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+% the specific language governing permissions and limitations under the License.
+
+\documentclass{beamer}
+% Uncomment the following lines to print handout
+% \documentclass[xcolor=dvipsnames,handout]{beamer}
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4
+% on 1}[border shrink=5mm]
+\usepackage{hyperref}
+\usepackage{pdfrender}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{xcolor}
+%custom colors
+\definecolor{univ}{RGB}{198,12,48}
+\definecolor{school}{RGB}{0,52,120}
+\definecolor{itemgrey}{RGB}{216,216,216}
+\colorlet{bluetitle}{school!90}
+\colorlet{bluefont}{bluetitle!10}
+\colorlet{nextuniv}{univ!90}
+\colorlet{textuniv}{univ!10}
+\usetheme{AnnArbor}
+\usecolortheme{beaver}
+
+\setbeamercolor{title page header}{fg=univ}
+\setbeamercolor{author}{fg=school}
+\setbeamercolor{date}{fg=school}
+\setbeamercolor{frametitle}{fg=school}
+\setbeamercolor{structure}{bg=univ}
+
+  \setbeamertemplate{enumerate items}[square]
+  \setbeamertemplate{enumerate submitem}[circle]
+  \setbeamercolor{enumerate items}{bg=itemgrey,fg=black}
+  \setbeamercolor{enumerate subitem}{bg=itemgrey, fg=black}
+  \setbeamercolor{item projected}{bg=school,fg=white}
+  
+  \setbeamercolor{itemize item}{bg=itemgrey,fg=white}
+  
+\setbeamercolor{alerted text}{fg=orange}
+
+
+\setbeamercolor{block body}{bg=normal text.bg!80!black}
+\setbeamercolor{block body example}{bg=normal text.bg!80!black}
+\setbeamercolor{block body alerted}{bg=normal text.bg!80!black}
+
+\setbeamercolor{block title}{bg=bluetitle,fg=bluefont}
+\setbeamercolor{block title example}{use={normal text,example text},fg=textuniv,bg=nextuniv}
+\setbeamercolor{block title alerted}{use={normal text,alerted text},fg=textuniv,bg=univ}
+
+\usefonttheme[onlymath]{serif}
+\setbeamertemplate{navigation symbols}{} % remove navigation 
+\setbeamercovered{transparent=30} % set transparency of the hidden elements
+
+
+
+
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+
+% Title page definition
+\setbeamertemplate{title page}{%
+\begin{tikzpicture}[remember picture,overlay]
+   \tikzstyle{nome}=[align=left, text width=10cm, xshift=6cm]
+   
+    \node[nome,yshift=-1.2cm] at (current page.north west){%
+    \includegraphics[width=3cm]{ntu_logo.png}};
+   
+    \node[nome,yshift=-3.2cm] at (current page.north west){\normalfont\sffamily\huge\bfseries \color{univ}{\inserttitle}};
+   \node[nome,yshift=-5cm] at (current page.north west){\normalfont\sffamily  \color{school}{\textit{Presented by}}};
+    \node[nome,yshift=-6cm] at (current page.north west){\normalfont\sffamily\Large\bfseries \color{school}{\insertauthor}};
+    \node[nome,yshift=-7cm] at (current page.north west){\normalfont\sffamily \color{school}{\textit{\insertinstitute}}};    
+    \node[nome,yshift=-8.4cm] at (current page.north west){\sffamily \color{school}{\textit{\insertdate}}}; 
+    \end{tikzpicture}
+}
+
+
+\AtBeginSection[]
+{
+   \begin{frame}
+       \frametitle{Outline}
+       \tableofcontents[currentsection,currentsubsection]
+   \end{frame}
+}
+

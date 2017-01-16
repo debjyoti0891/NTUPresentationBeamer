@@ -1,0 +1,132 @@
+% This file is part of the NTUTemplate distribution.
+%    (https://github.com/debjyoti0891/NTUPresentationBeamer)
+% Copyright (c) 2017 Debjyoti Bhattacharjee.
+% 
+% Licensed under the Apache License, Version 2.0 (the "License"); 
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+% 
+% http://www.apache.org/licenses/LICENSE-2.0
+% 
+% Unless required by applicable law or agreed to in writing, software distributed 
+% under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+% OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+% the specific language governing permissions and limitations under the License.
+
+\input{preamble}
+\begin{document}
+\title[Short title]{A Long Title For \newline The Presentation}   
+\author{Debjyoti Bhattachajee} 
+\institute[SCSE, NTU]{School of Computer Science and Engineering \\ Nanyang Technological University, \\Singapore}
+\logo{\includegraphics[height=1cm]{ntu_logo.png}}
+
+\date{\today} 
+
+\frame[plain]{\titlepage} 
+
+\frame{\frametitle{Table of contents}\tableofcontents} 
+
+
+\section{Section no.1} 
+\frame{\frametitle{Title} 
+Each frame should have a title.
+}
+\subsection{Subsection no.1.1  }
+\frame{ 
+Without title somethink is missing. 
+}
+
+
+\section{Section no. 2} 
+\subsection{Lists I}
+\frame{\frametitle{unnumbered lists}
+\begin{itemize}
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{itemize} 
+}
+
+\frame{\frametitle{lists with pause}
+\begin{itemize}
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{itemize} 
+}
+
+\subsection{Lists II}
+\frame{\frametitle{numbered lists}
+\begin{enumerate}
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{enumerate}
+}
+\frame{\frametitle{numbered lists with pause}
+\begin{enumerate}
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{enumerate}
+}
+
+\section{Tables} 
+\frame{\frametitle{Tables}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Date} & \textbf{Instructor} & \textbf{Title} \\
+\hline
+WS 04/05 & Sascha Frank & First steps with  \LaTeX  \\
+\hline
+SS 05 & Sascha Frank & \LaTeX \ Course serial \\
+\hline
+\end{tabular}}
+
+
+\frame{\frametitle{Tables with pause}
+\begin{tabular}{c c c}
+A & B & C \\ 
+\pause 
+1 & 2 & 3 \\  
+\pause 
+A & B & C \\ 
+\end{tabular} }
+
+
+\section{Subsection IV}
+\subsection{Blocks}
+\frame{\frametitle{Blocks}
+
+\begin{block}{Ordinary block}
+Normal block text
+\end{block}
+
+\begin{exampleblock}{Example block}
+Example block text
+\end{exampleblock}
+
+
+\begin{alertblock}{Alert Block}
+Alert block text
+\end{alertblock}
+}
+
+\subsection{Various environments}
+\begin{frame}
+ \frametitle{Environments}
+\begin{definition}
+ This is a definition.
+\end{definition}
+
+\begin{theorem}
+ This is a theorem.
+\end{theorem} 
+\end{frame}
+
+\end{document}
+
